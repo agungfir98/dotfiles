@@ -103,7 +103,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-eval "$(starship init zsh)"
+
+# Check that the function `starship_zle-keymap-select()` is defined.
+# xref: https://github.com/starship/starship/issues/3418
+type starship_zle-keymap-select >/dev/null || \
+  {
+    echo "Load starship"
+    eval "$(/usr/local/bin/starship init zsh)"
+  }
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 alias tmuxconf="vi ~/.tmux.conf"
@@ -144,3 +152,6 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+set -o vi
+set keymap vi
