@@ -8,3 +8,4 @@
 - oh my zsh
 - nvm (node version manager)
 - zoxide (file jumper, alternative of z file jumper)
+- lazygit
