@@ -13,6 +13,7 @@ return {
         css = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        astro = { "prettier" },
       },
     })
   end,
