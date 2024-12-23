@@ -153,5 +153,9 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-set -o vi
-set keymap vi
+if [[ $NVIM == "" ]]; then
+  set -o vi
+  set keymap vi
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
