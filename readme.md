@@ -9,3 +9,4 @@
 - nvm (node version manager)
 - zoxide (file jumper, alternative of z file jumper)
 - lazygit
+- govm (go version manager)
